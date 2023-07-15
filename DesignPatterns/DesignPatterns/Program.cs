@@ -2,6 +2,8 @@
 
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Composite;
+using Client = DesignPatterns.Structural.Bridge.Client;
 
 // Pattern: Adapter
 var adaptee = new Adaptee();
@@ -26,4 +28,29 @@ Console.WriteLine();
             
 abstraction = new ExtendedAbstraction(new ConcreteImplementationB());
 client.ClientCode(abstraction);
+//
+
+//Pattern: Composite
+var cl = new ClientCompose();
+
+// This way the client code can support the simple leaf
+// components...
+var leaf = new Leaf();
+Console.WriteLine("Client: I get a simple component:");
+cl.ClientCode(leaf);
+
+// ...as well as the complex composites.
+var tree = new Composite();
+var branch1 = new Composite();
+branch1.Add(new Leaf());
+branch1.Add(new Leaf());
+Composite branch2 = new Composite();
+branch2.Add(new Leaf());
+tree.Add(branch1);
+tree.Add(branch2);
+Console.WriteLine("Client: Now I've got a composite tree:");
+cl.ClientCode(tree);
+
+Console.Write("Client: I don't need to check the components classes even when managing the tree:\n");
+cl.ClientCode2(tree, leaf);
 //
