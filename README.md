@@ -4,6 +4,6 @@ Design patterns are typical solutions to commonly occurring problems in software
 
 <div align="right">
   
-![bmc_qr](https://github.com/VasylHulpak/Design-Patterns/assets/76429065/891a81a2-f000-4f1f-9e4f-ec14a0b93c33)
+<a href="https://www.buymeacoffee.com/hulpakvasyC" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 </div>
