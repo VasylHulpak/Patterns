@@ -2,6 +2,8 @@
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Facade;
+
 using Client = DesignPatterns.Structural.Bridge.Client;
 
 // Pattern: Adapter
@@ -49,6 +51,13 @@ var decorator1 = new ConcreteDecoratorA(concreteComponent);
 var decorator2 = new ConcreteDecoratorB(decorator1);
 Console.WriteLine("Client: Now I've got a decorated component:");
 clientDecorator.ClientCode(decorator2);
+//
+
+// Pattern: Facade
+Subsystem1 subsystem1 = new Subsystem1();
+Subsystem2 subsystem2 = new Subsystem2();
+Facade facade = new Facade(subsystem1, subsystem2);
+FacadeClient.ClientCode(facade);
 //
 
 Console.ReadKey();
