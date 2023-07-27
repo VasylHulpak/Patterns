@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Adapter;
-
-public class Adaptee
+﻿namespace DesignPatterns.Structural.Adapter
 {
-	public string GetSpecificRequest()
+	public class Adaptee
 	{
-		return "Specific request.";
+		public string GetSpecificRequest()
+		{
+			return "Specific request.";
+		}
 	}
 }

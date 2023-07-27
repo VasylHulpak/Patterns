@@ -1,16 +1,17 @@
-﻿namespace DesignPatterns.Structural.Decorator;
-
-public class Decorator : Component
+﻿namespace DesignPatterns.Structural.Decorator
 {
-	private readonly Component _component;
-
-	protected Decorator(Component component)
+	public class Decorator : Component
 	{
-		_component = component;
-	}
+		private readonly Component _component;
 
-	public override string Operation()
-	{
-		return _component.Operation();
+		protected Decorator(Component component)
+		{
+			_component = component;
+		}
+
+		public override string Operation()
+		{
+			return _component.Operation();
+		}
 	}
 }

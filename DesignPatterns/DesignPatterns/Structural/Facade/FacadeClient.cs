@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Facade;
-
-public class FacadeClient
+﻿namespace DesignPatterns.Structural.Facade
 {
-	public static void ClientCode(Facade facade)
+	public class FacadeClient
 	{
-		Console.Write(facade.Operation());
+		public static void ClientCode(Facade facade)
+		{
+			Console.Write(facade.Operation());
+		}
 	}
 }

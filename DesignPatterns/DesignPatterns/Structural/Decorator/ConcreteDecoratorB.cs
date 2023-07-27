@@ -1,13 +1,14 @@
-﻿namespace DesignPatterns.Structural.Decorator;
-
-public class ConcreteDecoratorB: Decorator
+﻿namespace DesignPatterns.Structural.Decorator
 {
-	public ConcreteDecoratorB(Component comp) : base(comp)
+	public class ConcreteDecoratorB: Decorator
 	{
-	}
+		public ConcreteDecoratorB(Component comp) : base(comp)
+		{
+		}
 
-	public override string Operation()
-	{
-		return $"ConcreteDecoratorB({base.Operation()})";
+		public override string Operation()
+		{
+			return $"ConcreteDecoratorB({base.Operation()})";
+		}
 	}
 }

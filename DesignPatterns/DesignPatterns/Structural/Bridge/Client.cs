@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Bridge;
-
-public class Client
+﻿namespace DesignPatterns.Structural.Bridge
 {
-	public void ClientCode(Abstraction abstraction)
+	public class Client
 	{
-		Console.Write(abstraction.Operation());
+		public void ClientCode(Abstraction abstraction)
+		{
+			Console.Write(abstraction.Operation());
+		}
 	}
 }

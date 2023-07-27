@@ -1,6 +1,7 @@
-﻿namespace DesignPatterns.Structural.Bridge;
-
-public interface IImplementation
+﻿namespace DesignPatterns.Structural.Bridge
 {
-	string OperationImplementation();
+	public interface IImplementation
+	{
+		string OperationImplementation();
+	}
 }

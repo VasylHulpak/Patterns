@@ -1,14 +1,15 @@
-﻿namespace DesignPatterns.Structural.Facade;
-
-public class Subsystem1
+﻿namespace DesignPatterns.Structural.Facade
 {
-	public string Operation1()
+	public class Subsystem1
 	{
-		return "Subsystem1: Ready!\n";
-	}
+		public string Operation1()
+		{
+			return "Subsystem1: Ready!\n";
+		}
 
-	public string Operation2()
-	{
-		return "Subsystem1: Go!\n";
+		public string Operation2()
+		{
+			return "Subsystem1: Go!\n";
+		}
 	}
 }

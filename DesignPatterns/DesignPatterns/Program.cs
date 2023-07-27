@@ -5,6 +5,7 @@ using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Facade;
 using DesignPatterns.Structural.Flyweight;
 using DesignPatterns.Structural.Flyweight.Models;
+using DesignPatterns.Structural.Proxy;
 using Client = DesignPatterns.Structural.Bridge.Client;
 
 // Pattern: Adapter
@@ -61,7 +62,7 @@ Facade facade = new Facade(subsystem1, subsystem2);
 FacadeClient.ClientCode(facade);
 //
 
-//
+//Pattern: flyweight
 void addCarToPoliceDatabase(FlyweightFactory factory, Car car)
 {
 	Console.WriteLine("\nClient: Adding a car to database.");
@@ -100,8 +101,21 @@ addCarToPoliceDatabase(factory, new Car {
 	Model = "X1",
 	Color = "red"
 });
-
-//
 factory.ListFlyweights();
+//
+
+// Pattern:Proxy
+var proxyClient = new ProxyClient();
+            
+Console.WriteLine("Client: Executing the client code with a real subject:");
+var realSubject = new RealSubject();
+proxyClient.ClientCode(realSubject);
+
+Console.WriteLine();
+
+Console.WriteLine("Client: Executing the same client code with a proxy:");
+var proxy = new Proxy(realSubject);
+proxyClient.ClientCode(proxy);
+//
 
 Console.ReadKey();

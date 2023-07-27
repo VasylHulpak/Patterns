@@ -1,19 +1,20 @@
-﻿namespace DesignPatterns.Structural.Composite;
-
-public class ClientCompose
+﻿namespace DesignPatterns.Structural.Composite
 {
-	public void ClientCode(Component leaf)
+	public class ClientCompose
 	{
-		Console.WriteLine($"RESULT: {leaf.Operation()}\n");
-	}
-
-	public void ClientCode2(Component component1, Component component2)
-	{
-		if (component1.IsComposite())
+		public void ClientCode(Component leaf)
 		{
-			component1.Add(component2);
+			Console.WriteLine($"RESULT: {leaf.Operation()}\n");
 		}
+
+		public void ClientCode2(Component component1, Component component2)
+		{
+			if (component1.IsComposite())
+			{
+				component1.Add(component2);
+			}
             
-		Console.WriteLine($"RESULT: {component1.Operation()}");
+			Console.WriteLine($"RESULT: {component1.Operation()}");
+		}
 	}
 }

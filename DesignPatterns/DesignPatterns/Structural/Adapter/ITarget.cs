@@ -1,6 +1,7 @@
-﻿namespace DesignPatterns.Structural.Adapter;
-
-public interface ITarget
+﻿namespace DesignPatterns.Structural.Adapter
 {
-	string GetRequest();
+	public interface ITarget
+	{
+		string GetRequest();
+	}
 }

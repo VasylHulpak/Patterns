@@ -1,17 +1,18 @@
-﻿namespace DesignPatterns.Structural.Bridge;
-
-public class Abstraction
+﻿namespace DesignPatterns.Structural.Bridge
 {
-	protected IImplementation _implementation;
-        
-	public Abstraction(IImplementation implementation)
+	public class Abstraction
 	{
-		_implementation = implementation;
-	}
+		protected IImplementation _implementation;
         
-	public virtual string Operation()
-	{
-		return "Abstract: Base operation with:\n" + 
-		       _implementation.OperationImplementation();
+		public Abstraction(IImplementation implementation)
+		{
+			_implementation = implementation;
+		}
+        
+		public virtual string Operation()
+		{
+			return "Abstract: Base operation with:\n" + 
+			       _implementation.OperationImplementation();
+		}
 	}
 }

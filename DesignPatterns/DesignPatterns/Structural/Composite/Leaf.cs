@@ -1,14 +1,15 @@
-﻿namespace DesignPatterns.Structural.Composite;
-
-class Leaf : Component
+﻿namespace DesignPatterns.Structural.Composite
 {
-	public override string Operation()
+	class Leaf : Component
 	{
-		return "Leaf";
-	}
+		public override string Operation()
+		{
+			return "Leaf";
+		}
 
-	public override bool IsComposite()
-	{
-		return false;
+		public override bool IsComposite()
+		{
+			return false;
+		}
 	}
 }

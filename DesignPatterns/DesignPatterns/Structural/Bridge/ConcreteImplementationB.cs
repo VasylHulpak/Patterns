@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Bridge;
-
-public class ConcreteImplementationB : IImplementation
+﻿namespace DesignPatterns.Structural.Bridge
 {
-	public string OperationImplementation()
+	public class ConcreteImplementationB : IImplementation
 	{
-		return "ConcreteImplementationA: The result in platform B.\n";
+		public string OperationImplementation()
+		{
+			return "ConcreteImplementationA: The result in platform B.\n";
+		}
 	}
 }

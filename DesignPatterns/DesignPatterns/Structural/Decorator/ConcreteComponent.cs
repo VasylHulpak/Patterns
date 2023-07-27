@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Decorator;
-
-public class ConcreteComponent: Component
+﻿namespace DesignPatterns.Structural.Decorator
 {
-	public override string Operation()
+	public class ConcreteComponent: Component
 	{
-		return "ConcreteComponent";
+		public override string Operation()
+		{
+			return "ConcreteComponent";
+		}
 	}
 }

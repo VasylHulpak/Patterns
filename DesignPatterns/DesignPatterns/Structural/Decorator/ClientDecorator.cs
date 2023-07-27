@@ -1,9 +1,10 @@
-﻿namespace DesignPatterns.Structural.Decorator;
-
-public class ClientDecorator
+﻿namespace DesignPatterns.Structural.Decorator
 {
-	public void ClientCode(Component component)
+	public class ClientDecorator
 	{
-		Console.WriteLine("RESULT: " + component.Operation());
+		public void ClientCode(Component component)
+		{
+			Console.WriteLine("RESULT: " + component.Operation());
+		}
 	}
 }

@@ -1,6 +1,7 @@
-﻿namespace DesignPatterns.Structural.Decorator;
-
-public abstract class Component
+﻿namespace DesignPatterns.Structural.Decorator
 {
-	public abstract string Operation();
+	public abstract class Component
+	{
+		public abstract string Operation();
+	}
 }

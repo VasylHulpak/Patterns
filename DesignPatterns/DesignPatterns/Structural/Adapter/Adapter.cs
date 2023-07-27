@@ -1,16 +1,17 @@
-﻿namespace DesignPatterns.Structural.Adapter;
-
-public class Adapter: ITarget
+﻿namespace DesignPatterns.Structural.Adapter
 {
-	private readonly Adaptee _adaptee;
-
-	public Adapter(Adaptee adaptee)
+	public class Adapter: ITarget
 	{
-		_adaptee = adaptee;
-	}
+		private readonly Adaptee _adaptee;
 
-	public string GetRequest()
-	{
-		return $"This is '{_adaptee.GetSpecificRequest()}'";
+		public Adapter(Adaptee adaptee)
+		{
+			_adaptee = adaptee;
+		}
+
+		public string GetRequest()
+		{
+			return $"This is '{_adaptee.GetSpecificRequest()}'";
+		}
 	}
 }
