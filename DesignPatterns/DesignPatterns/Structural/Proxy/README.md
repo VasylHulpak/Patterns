@@ -6,6 +6,66 @@ Proxy is a structural design pattern that lets you provide a substitute or place
 
 A credit card is a proxy for a bank account, which is a proxy for a bundle of cash. Both implement the same interface: they can be used for making a payment. A consumer feels great because there’s no need to carry loads of cash around. A shop owner is also happy since the income from a transaction gets added electronically to the shop’s bank account without the risk of losing the deposit or getting robbed on the way to the bank.
 
+
+```
+public interface ISubject
+{
+    void Request();
+}
+
+class RealSubject : ISubject
+{
+    public void Request()
+    {
+        Console.WriteLine("RealSubject: Handling Request.");
+    }
+}
+
+class Proxy : ISubject
+{
+    private RealSubject _realSubject;
+    
+    public Proxy(RealSubject realSubject)
+    {
+        this._realSubject = realSubject;
+    }
+    
+    public void Request()
+    {
+        if (this.CheckAccess())
+        {
+            this._realSubject.Request();
+
+            this.LogAccess();
+        }
+    }
+    
+    public bool CheckAccess()
+    {
+        Console.WriteLine("Proxy: Checking access prior to firing a real request.");
+
+        return true;
+    }
+    
+    public void LogAccess()
+    {
+        Console.WriteLine("Proxy: Logging the time of request.");
+    }
+}
+
+public class Client
+{
+    public void ClientCode(ISubject subject)
+    {
+        // ... Before
+        
+        subject.Request();
+        
+        // ... After
+    }
+}
+```
+
 MIT Licensed
 
 **Copyright © 2023-present Vasyl Hulpak**
