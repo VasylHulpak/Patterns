@@ -18,7 +18,7 @@ public class Facade
 		result += _subsystem1.Operation1();
 		result += _subsystem2.Operation1();
 		result += "Facade orders subsystems to perform the action:\n";
-		result += _subsystem1.OperationN();
+		result += _subsystem1.Operation2();
 		result += _subsystem2.Operation2();
 		return result;
 	}

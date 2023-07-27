@@ -7,7 +7,7 @@ public class Subsystem1
 		return "Subsystem1: Ready!\n";
 	}
 
-	public string OperationN()
+	public string Operation2()
 	{
 		return "Subsystem1: Go!\n";
 	}
