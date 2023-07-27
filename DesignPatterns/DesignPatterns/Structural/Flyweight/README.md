@@ -12,7 +12,7 @@ public class Flyweight
 
     public Flyweight(Car car)
     {
-        this._sharedState = car;
+        _sharedState = car;
     }
 
     public void Operation(Car uniqueState)
@@ -31,7 +31,7 @@ public class FlyweightFactory
     {
         foreach (var elem in args)
         {
-            flyweights.Add(new Tuple<Flyweight, string>(new Flyweight(elem), this.getKey(elem)));
+            flyweights.Add(new Tuple<Flyweight, string>(new Flyweight(elem), getKey(elem)));
         }
     }
 
@@ -56,7 +56,7 @@ public class FlyweightFactory
 
     public Flyweight GetFlyweight(Car sharedState)
     {
-        string key = this.getKey(sharedState);
+        string key = getKey(sharedState);
 
         if (flyweights.Where(t => t.Item2 == key).Count() == 0)
         {
@@ -67,7 +67,7 @@ public class FlyweightFactory
         {
             Console.WriteLine("FlyweightFactory: Reusing existing flyweight.");
         }
-        return this.flyweights.Where(t => t.Item2 == key).FirstOrDefault().Item1;
+        return flyweights.Where(t => t.Item2 == key).FirstOrDefault().Item1;
     }
 
     public void listFlyweights()
