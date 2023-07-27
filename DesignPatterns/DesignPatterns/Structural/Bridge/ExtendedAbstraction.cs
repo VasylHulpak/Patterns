@@ -9,6 +9,6 @@ public class ExtendedAbstraction: Abstraction
 	public override string Operation()
 	{
 		return "ExtendedAbstraction: Extended operation with:\n" +
-		       base._implementation.OperationImplementation();
+		       _implementation.OperationImplementation();
 	}
 }

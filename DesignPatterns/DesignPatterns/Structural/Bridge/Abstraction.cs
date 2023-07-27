@@ -6,7 +6,7 @@ public class Abstraction
         
 	public Abstraction(IImplementation implementation)
 	{
-		this._implementation = implementation;
+		_implementation = implementation;
 	}
         
 	public virtual string Operation()

@@ -19,10 +19,10 @@ class Composite : Component
 		int i = 0;
 		string result = "Branch(";
 
-		foreach (Component component in this._children)
+		foreach (Component component in _children)
 		{
 			result += component.Operation();
-			if (i != this._children.Count - 1)
+			if (i != _children.Count - 1)
 			{
 				result += "+";
 			}
