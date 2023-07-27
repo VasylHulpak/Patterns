@@ -27,16 +27,16 @@ class Proxy : ISubject
     
     public Proxy(RealSubject realSubject)
     {
-        this._realSubject = realSubject;
+        _realSubject = realSubject;
     }
     
     public void Request()
     {
-        if (this.CheckAccess())
+        if (CheckAccess())
         {
-            this._realSubject.Request();
+            _realSubject.Request();
 
-            this.LogAccess();
+            LogAccess();
         }
     }
     

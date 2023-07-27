@@ -5,7 +5,7 @@ One of these hierarchies (often called the Abstraction) will get a reference to 
 
 
 
-```sh
+```
 using System;
 
 public class Abstraction
@@ -14,7 +14,7 @@ public class Abstraction
     
     public Abstraction(IImplementation implementation)
     {
-        this._implementation = implementation;
+        _implementation = implementation;
     }
     
     public virtual string Operation()

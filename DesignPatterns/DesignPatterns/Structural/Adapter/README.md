@@ -19,9 +19,7 @@ Armies of most countries are structured as hierarchies. An army consists of seve
 
 Example:
 
-```sh
-using System;
-
+```
 public interface ITarget
 {
     string GetRequest();
