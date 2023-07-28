@@ -1,13 +1,14 @@
-﻿namespace DesignPatterns.Structural.Proxy;
-
-public class ProxyClient
+﻿namespace DesignPatterns.Structural.Proxy
 {
-	public void ClientCode(ISubject subject)
+	public class ProxyClient
 	{
-		// ... Before
+		public void ClientCode(ISubject subject)
+		{
+			// ... Before
             
-		subject.Request();
+			subject.Request();
             
-		// ... After
+			// ... After
+		}
 	}
 }

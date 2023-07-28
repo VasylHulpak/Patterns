@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Structural.Adapter;
+﻿using DesignPatterns.Creational.Factory_Method;
+using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
@@ -118,4 +119,7 @@ var proxy = new Proxy(realSubject);
 proxyClient.ClientCode(proxy);
 //
 
+// Pattern: Factory Method
+ new ClientFactoryMethod().Main();
+//
 Console.ReadKey();

@@ -1,33 +1,34 @@
-﻿namespace DesignPatterns.Structural.Proxy;
-
-public class Proxy : ISubject
+﻿namespace DesignPatterns.Structural.Proxy
 {
-	private RealSubject _realSubject;
-
-	public Proxy(RealSubject realSubject)
+	public class Proxy : ISubject
 	{
-		_realSubject = realSubject;
-	}
+		private RealSubject _realSubject;
 
-	public void Request()
-	{
-		if (CheckAccess())
+		public Proxy(RealSubject realSubject)
 		{
-			_realSubject.Request();
-
-			LogAccess();
+			_realSubject = realSubject;
 		}
-	}
 
-	public bool CheckAccess()
-	{
-		Console.WriteLine("Proxy: Checking access prior to firing a real request.");
+		public void Request()
+		{
+			if (CheckAccess())
+			{
+				_realSubject.Request();
 
-		return true;
-	}
+				LogAccess();
+			}
+		}
 
-	public void LogAccess()
-	{
-		Console.WriteLine("Proxy: Logging the time of request.");
+		public bool CheckAccess()
+		{
+			Console.WriteLine("Proxy: Checking access prior to firing a real request.");
+
+			return true;
+		}
+
+		public void LogAccess()
+		{
+			Console.WriteLine("Proxy: Logging the time of request.");
+		}
 	}
 }
