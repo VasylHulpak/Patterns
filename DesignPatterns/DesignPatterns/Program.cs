@@ -120,6 +120,6 @@ proxyClient.ClientCode(proxy);
 //
 
 // Pattern: Factory Method
- new ClientFactoryMethod().Main();
+ new FactoryMethod().Main();
 //
 Console.ReadKey();

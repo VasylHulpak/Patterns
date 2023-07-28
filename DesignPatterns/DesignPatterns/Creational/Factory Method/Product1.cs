@@ -1,14 +1,17 @@
 ﻿namespace DesignPatterns.Creational.Factory_Method
 {
 	/// <summary>
-	/// Interface IProduct.
+	/// Class Product1.
 	/// </summary>
-	public interface IProduct
+	public class Product1: IProduct
 	{
 		/// <summary>
-		/// Method for making some operation.
+		/// Method Operation.
 		/// </summary>
 		/// <returns>string</returns>
-		string Operation();
+		public string Operation()
+		{
+			return "{Result of ConcreteProduct1}";
+		}
 	}
 }
