@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Creational.Factory_Method;
+﻿using DesignPatterns.Creational.Abstract_Factory;
+using DesignPatterns.Creational.Factory_Method;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
@@ -121,5 +122,9 @@ proxyClient.ClientCode(proxy);
 
 // Pattern: Factory Method
  new FactoryMethod().Main();
+//
+
+// Pattern: Abstract factory
+new AbstractFactoryClient().Main();
 //
 Console.ReadKey();
