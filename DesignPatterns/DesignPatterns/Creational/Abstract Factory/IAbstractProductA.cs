@@ -1,13 +1,14 @@
-﻿namespace DesignPatterns.Creational.Abstract_Factory;
-
-/// <summary>
-/// Interface IAbstractProductA.
-/// </summary>
-public interface IAbstractProductA
+﻿namespace DesignPatterns.Creational.Abstract_Factory
 {
 	/// <summary>
-	/// Method UsefulFunctionA.
+	/// Interface IAbstractProductA.
 	/// </summary>
-	/// <returns>string</returns>
-	string UsefulFunctionA();
+	public interface IAbstractProductA
+	{
+		/// <summary>
+		/// Method UsefulFunctionA.
+		/// </summary>
+		/// <returns>string</returns>
+		string UsefulFunctionA();
+	}
 }

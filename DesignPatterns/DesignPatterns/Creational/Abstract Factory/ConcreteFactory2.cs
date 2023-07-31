@@ -1,25 +1,26 @@
-﻿namespace DesignPatterns.Creational.Abstract_Factory;
-
-/// <summary>
-/// Class ConcreteFactory2.
-/// </summary>
-public class ConcreteFactory2 : IAbstractFactory
+﻿namespace DesignPatterns.Creational.Abstract_Factory
 {
 	/// <summary>
-	/// Method CreateProductA.
+	/// Class ConcreteFactory2.
 	/// </summary>
-	/// <returns>IAbstractProductA</returns>
-	public IAbstractProductA CreateProductA()
+	public class ConcreteFactory2 : IAbstractFactory
 	{
-		return new ConcreteProductA2();
-	}
+		/// <summary>
+		/// Method CreateProductA.
+		/// </summary>
+		/// <returns>IAbstractProductA</returns>
+		public IAbstractProductA CreateProductA()
+		{
+			return new ConcreteProductA2();
+		}
 
-	/// <summary>
-	/// Method CreateProductA.
-	/// </summary>
-	/// <returns>IAbstractProductA</returns>
-	public IAbstractProductB CreateProductB()
-	{
-		return new ConcreteProductB2();
+		/// <summary>
+		/// Method CreateProductA.
+		/// </summary>
+		/// <returns>IAbstractProductA</returns>
+		public IAbstractProductB CreateProductB()
+		{
+			return new ConcreteProductB2();
+		}
 	}
 }

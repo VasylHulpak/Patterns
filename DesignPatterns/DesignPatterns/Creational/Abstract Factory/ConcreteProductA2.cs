@@ -1,16 +1,17 @@
-﻿namespace DesignPatterns.Creational.Abstract_Factory;
-
-/// <summary>
-/// Class ConcreteProductA2.
-/// </summary>
-public class ConcreteProductA2 : IAbstractProductA
+﻿namespace DesignPatterns.Creational.Abstract_Factory
 {
 	/// <summary>
-	/// Method UsefulFunctionA.
+	/// Class ConcreteProductA2.
 	/// </summary>
-	/// <returns>string</returns>
-	public string UsefulFunctionA()
+	public class ConcreteProductA2 : IAbstractProductA
 	{
-		return "The result of the product A2.";
+		/// <summary>
+		/// Method UsefulFunctionA.
+		/// </summary>
+		/// <returns>string</returns>
+		public string UsefulFunctionA()
+		{
+			return "The result of the product A2.";
+		}
 	}
 }
