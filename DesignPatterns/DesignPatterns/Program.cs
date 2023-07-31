@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Creational.Abstract_Factory;
+using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Factory_Method;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
@@ -126,5 +127,24 @@ proxyClient.ClientCode(proxy);
 
 // Pattern: Abstract factory
 new AbstractFactoryClient().Main();
+//
+
+// Pattern: Builder
+var director = new Director();
+var builder = new ConcreteBuilder();
+director.Builder = builder;
+            
+Console.WriteLine("Standard basic product:");
+director.BuildMinimalViableProduct();
+Console.WriteLine(builder.GetProduct().ListParts());
+
+Console.WriteLine("Standard full featured product:");
+director.BuildFullFeaturedProduct();
+Console.WriteLine(builder.GetProduct().ListParts());
+
+Console.WriteLine("Custom product:");
+builder.BuildPartA();
+builder.BuildPartC();
+Console.Write(builder.GetProduct().ListParts());
 //
 Console.ReadKey();
