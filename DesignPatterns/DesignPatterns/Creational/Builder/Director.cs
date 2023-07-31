@@ -5,9 +5,9 @@
 	/// </summary>
 	public class Director
 	{
-		private IBuilder _builder;
+		private IBuilder? _builder;
     
-		public IBuilder Builder
+		public IBuilder? Builder
 		{
 			set { _builder = value; } 
 		}
@@ -17,7 +17,7 @@
 		/// </summary>
 		public void BuildMinimalViableProduct()
 		{
-			_builder.BuildPartA();
+			_builder?.BuildPartA();
 		}
     
 		/// <summary>
@@ -25,9 +25,9 @@
 		/// </summary>
 		public void BuildFullFeaturedProduct()
 		{
-			_builder.BuildPartA();
-			_builder.BuildPartB();
-			_builder.BuildPartC();
+			_builder?.BuildPartA();
+			_builder?.BuildPartB();
+			_builder?.BuildPartC();
 		}
 	}
 }
