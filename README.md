@@ -1,13 +1,17 @@
 # Patterns
 
-Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
-
-
+Patterns can be devided in 3 big categories:
+  <div>&nbsp;&nbsp;&nbsp;○ Design Patterns</div>
+  <div>&nbsp;&nbsp;&nbsp;○ Rendering Patterns</div>
+    <div>&nbsp;&nbsp;&nbsp;○ Performance Patterns</div>
+<hr/>
+    
 <div align="center">
   
 ![Alt](https://repobeats.axiom.co/api/embed/fde0cb2fe6605e068ff537490bd4f072b392a176.svg "Repobeats analytics image")
 
 </div>
+
 
 <div align="right">
   
